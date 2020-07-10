@@ -1,0 +1,1 @@
+web: uvicorn library_offset.asgi:application

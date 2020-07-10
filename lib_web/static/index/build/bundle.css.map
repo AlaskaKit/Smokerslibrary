@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "..\\..\\Book.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\r\n  import { createEventDispatcher } from \"svelte\";\r\n\r\n  const dispatch = createEventDispatcher();\r\n\r\n  export let id;\r\n  export let name;\r\n  export let year;\r\n  export let author;\r\n  export let isbn;\r\n\r\n  const onDelete = () => dispatch(\"removebook\", id);\r\n</script>\r\n\r\n<style>\r\n  h1 {\r\n    color: #204f6e;\r\n  }\r\n\r\n  h3 {\r\n    margin-bottom: 10px;\r\n  }\r\n</style>\r\n\r\n<div class=\"card\">\r\n  <h1>\r\n     {name}\r\n\r\n    <button class=\"btn btn-danger btn-sm\" on:click={onDelete}>x</button>\r\n  </h1>\r\n  <h3>\r\n      id: {id}\r\n  </h3>\r\n  <h3>\r\n      year: {year}\r\n  </h3>\r\n  <h3>\r\n      author: {author}\r\n  </h3>\r\n  <h3>\r\n      ISBN: {isbn}\r\n  </h3>\r\n</div>\r\n"
+  ],
+  "names": [],
+  "mappings": "AAeE,EAAE,eAAC,CAAC,AACF,KAAK,CAAE,OAAO,AAChB,CAAC,AAED,EAAE,eAAC,CAAC,AACF,aAAa,CAAE,IAAI,AACrB,CAAC"
+}
